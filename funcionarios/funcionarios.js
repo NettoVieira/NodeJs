@@ -5,7 +5,7 @@ const axios = require('axios')
 const filtraPais = funcionario => funcionario.pais === 'China' 
 const filtraGenero = funcionario => funcionario.genero === 'F'
 const menorSalario = (func, funcAtual) => {
-  return func.salario < funcAtual.salario ? func : funcAtual
+  return func.salario > funcAtual.salario ? func : funcAtual
 }
 
 axios.get(url).then(response => {
